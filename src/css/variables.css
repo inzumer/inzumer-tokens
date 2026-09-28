@@ -130,7 +130,7 @@
   --input-placeholder: rgb(var(--color-neutral-400));
 }
 
-[data-color-scheme="dark"] {
+[data-color-scheme='dark'] {
   --surface-primary: rgb(var(--color-neutral-950));
   --surface-secondary: rgb(var(--color-neutral-900));
   --surface-tertiary: rgb(var(--color-neutral-800));

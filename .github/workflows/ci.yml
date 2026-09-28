@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: inzumer/inzumer-ci/.github/workflows/node-ci.yml@v1
+    with:
+      audit-level: high
+      commands: |
+        pnpm check
+        pnpm test
+        npm pack --dry-run

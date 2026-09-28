@@ -5,14 +5,13 @@
   "description": "Design tokens, theming, and Tailwind preset for the Inzumer design system",
   "license": "MIT",
   "author": "Nahuel Zamuner <inzumer@gmail.com>",
-  "homepage": "https://github.com/inzumer/ui-library/tree/main/packages/tokens#readme",
+  "homepage": "https://github.com/inzumer/inzumer-tokens#readme",
   "bugs": {
-    "url": "https://github.com/inzumer/ui-library/issues"
+    "url": "https://github.com/inzumer/inzumer-tokens/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/inzumer/ui-library.git",
-    "directory": "packages/tokens"
+    "url": "https://github.com/inzumer/inzumer-tokens.git"
   },
   "keywords": [
     "design-tokens",
@@ -22,7 +21,12 @@
     "css-variables"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20"
   },
   "type": "module",
   "sideEffects": [
@@ -52,21 +56,33 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run --passWithNoTests",
     "lint": "eslint src",
-    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "changeset": "changeset",
+    "release": "pnpm build && changeset publish"
   },
   "peerDependencies": {
     "react": ">=18 || ^19",
     "react-dom": ">=18 || ^19"
   },
   "devDependencies": {
-    "@inzumer/eslint-config": "workspace:*",
-    "@inzumer/tsconfig": "workspace:*",
+    "@changesets/cli": "^2.29.7",
+    "@inzumer/eslint": "github:inzumer/inzumer-eslint#421a6c01fa6f62519c8f5d7d5b53e45780569d7d",
+    "@inzumer/prettier": "github:inzumer/inzumer-prettier#87763a515f7b470b73c172f8e7c8ff7e7ac94365",
+    "@inzumer/tsconfig": "github:inzumer/inzumer-tsconfig#70691fbdfedbc9dd44a327f629177b3370c03260",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^9.39.5",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
+    "prettier": "^3.9.9",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^3.4.19",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.1",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^2.1.6"
+    "vitest": "^5.0.2"
   }
 }
