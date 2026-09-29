@@ -26,6 +26,7 @@ function buildTailwindColors(): ColorMap {
     secondary: 'var(--surface-secondary)',
     tertiary: 'var(--surface-tertiary)',
     inverse: 'var(--surface-inverse)',
+    overlay: 'var(--surface-overlay)',
   };
 
   result['text-color'] = {
