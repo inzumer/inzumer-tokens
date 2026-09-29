@@ -16,15 +16,7 @@ export const buildCssVars = (colors: BaseColors): FlatRecord => flattenColors(co
 
 const BUTTON_VARIANTS = ['primary', 'secondary', 'ghost', 'destructive'] as const;
 
-/**
- * Flattens a (possibly partial) semantic token override into the exact CSS
- * custom property names consumed by `@inzumer/tokens/css/variables` (e.g.
- * `button.primary.background` -> `--btn-primary-bg`). Only keys actually
- * present in `semantic` are emitted, since these vars are also set per
- * color-scheme in the static stylesheet — injecting the full resolved theme
- * unconditionally would pin light-mode values as inline styles and break
- * the `[data-color-scheme="dark"]` cascade (inline styles always win).
- */
+/** Only the overridden semantic keys, so inline vars never pin light values over dark mode. */
 export const buildSemanticCssVars = (semantic?: DeepPartial<SemanticTokens>): FlatRecord => {
   if (!semantic) {
     return {};
