@@ -1,8 +1,4 @@
-/**
- * @inzumer/tokens — CSS Custom Properties
- * Generated from base tokens. Consumed via Tailwind preset and semantic tokens.
- * Values are raw RGB channels (no `rgb()` wrapper) for alpha compositing support.
- */
+/* @inzumer/tokens — CSS variables as raw RGB channels (for alpha: rgb(var(--x) / 0.5)). */
 
 :root {
   /* Primary */

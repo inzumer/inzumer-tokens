@@ -1,7 +1,4 @@
-/**
- * @inzumer/tokens — Typography base styles
- * Uses semantic CSS vars for color, not hardcoded values.
- */
+/* @inzumer/tokens — base typography, colors from semantic variables. */
 
 body {
   font-family:
