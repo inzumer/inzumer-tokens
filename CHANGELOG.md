@@ -1,5 +1,11 @@
 # @inzumer/tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- ade47d9: Tailwind preset: `surface.overlay` (`bg-surface-overlay`), the dimmed backdrop of modals, sheets and full-screen loaders.
+
 ## 1.1.1
 
 ### Patch Changes
