@@ -75,7 +75,7 @@
     "@inzumer/prettier": "github:inzumer/inzumer-prettier#87763a515f7b470b73c172f8e7c8ff7e7ac94365",
     "@inzumer/tsconfig": "github:inzumer/inzumer-tsconfig#70691fbdfedbc9dd44a327f629177b3370c03260",
     "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react-dom": "^19.0.1",
     "eslint": "^9.39.5",
     "prettier": "^3.9.9",
     "react": "^19.2.0",
