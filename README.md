@@ -28,6 +28,13 @@ import { DefaultPreset } from '@inzumer/tokens/tailwind';
 export default { presets: [DefaultPreset], content: ['./src/**/*.{ts,tsx}'] };
 ```
 
+With Tailwind 4, load that config from your CSS:
+
+```css
+@import 'tailwindcss';
+@config './tailwind.config.ts';
+```
+
 ```tsx
 // Change the color values at runtime
 import { InzumerProvider } from '@inzumer/tokens';
