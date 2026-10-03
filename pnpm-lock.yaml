@@ -12,8 +12,8 @@ importers:
         specifier: ^2.29.7
         version: 2.31.1
       '@inzumer/eslint':
-        specifier: github:inzumer/inzumer-eslint#421a6c01fa6f62519c8f5d7d5b53e45780569d7d
-        version: https://codeload.github.com/inzumer/inzumer-eslint/tar.gz/421a6c01fa6f62519c8f5d7d5b53e45780569d7d(@typescript-eslint/utils@8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)(vitest@5.0.2(vite@8.3.1(esbuild@0.27.7)(jiti@1.21.7)))
+        specifier: ^1.1.0
+        version: 1.1.0(@typescript-eslint/utils@8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)(vitest@5.0.2(vite@8.3.1(esbuild@0.27.7)(jiti@1.21.7)))
       '@inzumer/prettier':
         specifier: github:inzumer/inzumer-prettier#87763a515f7b470b73c172f8e7c8ff7e7ac94365
         version: https://codeload.github.com/inzumer/inzumer-prettier/tar.gz/87763a515f7b470b73c172f8e7c8ff7e7ac94365(prettier@3.9.9)
@@ -409,9 +409,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@inzumer/eslint@https://codeload.github.com/inzumer/inzumer-eslint/tar.gz/421a6c01fa6f62519c8f5d7d5b53e45780569d7d':
-    resolution: {tarball: https://codeload.github.com/inzumer/inzumer-eslint/tar.gz/421a6c01fa6f62519c8f5d7d5b53e45780569d7d}
-    version: 1.0.0
+  '@inzumer/eslint@1.1.0':
+    resolution: {integrity: sha512-GwhLu1WH9mpbf/Jg3YHHsMfnwP2aDWC1L/AZgFvFmc3ho9U0Cmj4NVuYd+TkYeoRTGI2oEqUSJYWNR68ciBOMw==}
     engines: {node: '>=20'}
     peerDependencies:
       eslint: '>=9'
@@ -694,6 +693,12 @@ packages:
     resolution: {integrity: sha512-ypfC34F3RKXvCXBglGqGMsUSMKlgwd1HX9AOAlx9RoZZ6GaI42YHVeKpzg3JG+wpBUJYTG+NNZhqbDWL8tBZkw==}
     cpu: [x64]
     os: [win32]
+
+  '@stylistic/eslint-plugin@5.10.0':
+    resolution: {integrity: sha512-nPK52ZHvot8Ju/0A4ucSX1dcPV2/1clx0kLcH5wDmrE4naKso7TUC/voUyU1O9OTKTrR6MYip6LP0ogEMQ9jPQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^9.0.0 || ^10.0.0
 
   '@tybys/wasm-util@0.10.4':
     resolution: {integrity: sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A==}
@@ -2935,8 +2940,9 @@ snapshots:
       chardet: 2.2.0
       iconv-lite: 0.7.3
 
-  '@inzumer/eslint@https://codeload.github.com/inzumer/inzumer-eslint/tar.gz/421a6c01fa6f62519c8f5d7d5b53e45780569d7d(@typescript-eslint/utils@8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)(vitest@5.0.2(vite@8.3.1(esbuild@0.27.7)(jiti@1.21.7)))':
+  '@inzumer/eslint@1.1.0(@typescript-eslint/utils@8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)(vitest@5.0.2(vite@8.3.1(esbuild@0.27.7)(jiti@1.21.7)))':
     dependencies:
+      '@stylistic/eslint-plugin': 5.10.0(eslint@9.39.5(jiti@1.21.7))
       '@typescript-eslint/eslint-plugin': 8.70.1(@typescript-eslint/parser@8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)
       '@typescript-eslint/parser': 8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)
       '@vitest/eslint-plugin': 1.6.27(@typescript-eslint/eslint-plugin@8.70.1(@typescript-eslint/parser@8.70.1(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3))(eslint@9.39.5(jiti@1.21.7))(typescript@5.9.3)(vitest@5.0.2(vite@8.3.1(esbuild@0.27.7)(jiti@1.21.7)))
@@ -3145,6 +3151,16 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.63.5':
     optional: true
+
+  '@stylistic/eslint-plugin@5.10.0(eslint@9.39.5(jiti@1.21.7))':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.10.1(eslint@9.39.5(jiti@1.21.7))
+      '@typescript-eslint/types': 8.70.1
+      eslint: 9.39.5(jiti@1.21.7)
+      eslint-visitor-keys: 4.2.1
+      espree: 10.4.0
+      estraverse: 5.3.0
+      picomatch: 4.0.7
 
   '@tybys/wasm-util@0.10.4':
     dependencies:

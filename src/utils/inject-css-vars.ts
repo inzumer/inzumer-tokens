@@ -9,6 +9,7 @@ const flattenColors = (colors: BaseColors, prefix = '--color'): FlatRecord => {
       vars[`${prefix}-${colorName}-${step}`] = value;
     }
   }
+
   return vars;
 };
 
@@ -61,6 +62,7 @@ export const buildSemanticCssVars = (semantic?: DeepPartial<SemanticTokens>): Fl
     if (!btn) {
       continue;
     }
+
     set(`--btn-${variant}-bg`, btn.background);
     set(`--btn-${variant}-bg-hover`, btn['background-hover']);
     set(`--btn-${variant}-bg-active`, btn['background-active']);
