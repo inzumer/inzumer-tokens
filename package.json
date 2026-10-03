@@ -70,7 +70,7 @@
     "react-dom": ">=18 || ^19"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.7",
+    "@changesets/cli": "^3.0.3",
     "@inzumer/eslint": "^1.1.0",
     "@inzumer/prettier": "github:inzumer/inzumer-prettier#87763a515f7b470b73c172f8e7c8ff7e7ac94365",
     "@inzumer/tsconfig": "github:inzumer/inzumer-tsconfig#70691fbdfedbc9dd44a327f629177b3370c03260",
