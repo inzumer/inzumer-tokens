@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   release:
-    uses: inzumer/inzumer-ci/.github/workflows/changesets-release.yml@v1
+    uses: inzumer/inzumer-ci/.github/workflows/changesets-release.yml@v2
     with:
       check: pnpm check
       publish: pnpm release
