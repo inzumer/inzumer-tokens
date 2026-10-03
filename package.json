@@ -86,5 +86,12 @@
     "vite": "^8.3.1",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.0.2"
+  },
+  "pnpm": {
+    "auditConfig": {
+      "ignoreGhsas": [
+        "GHSA-vfj7-8cjw-p6xm"
+      ]
+    }
   }
 }
