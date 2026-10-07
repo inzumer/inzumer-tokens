@@ -40,6 +40,13 @@ With Tailwind 4, load that config from your CSS:
 import { InzumerProvider } from '@inzumer/tokens';
 ```
 
+```ts
+// Concrete colors where CSS variables don't exist (React Native, email clients)
+import { DarkTheme, DefaultTheme, resolveTokens } from '@inzumer/tokens';
+
+resolveTokens(DefaultTheme).surface.primary; // 'rgb(249, 250, 251)'
+```
+
 | Export                          | Contents                                            |
 | ------------------------------- | --------------------------------------------------- |
 | `@inzumer/tokens`               | Base and semantic tokens, themes, `InzumerProvider` |

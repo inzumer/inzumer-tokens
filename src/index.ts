@@ -10,6 +10,7 @@ export { DefaultTheme } from './themes/default.js';
 export { DarkTheme } from './themes/dark.js';
 export { InzumerProvider, useInzumerTheme } from './provider/InzumerProvider.js';
 export { createTheme } from './utils/create-theme.js';
+export { resolveTokens } from './utils/resolve-tokens/index.js';
 export {
   buildCssVars,
   buildSemanticCssVars,
